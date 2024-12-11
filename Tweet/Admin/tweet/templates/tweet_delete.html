@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block tilte %}DELETE{% endblock %}
+
+{% block content %}
+
+<div class="m-3">
+    <h1 class="text-center mt-4 text-danger">
+        Welcome to Django
+    </h1>
+            
+    <h2>
+        ARU SURE YOU WANT TO DELETE
+    </h2>
+
+    <form  method="post">
+        {% csrf_token %}
+        <button class="btn-danger">
+            DELETE
+        </button>
+        <a href="{% url 'tweet_list' %}">
+            <button class="btn-success">
+                CANCLE
+            </button>
+        </a>
+    </form>
+
+</div>
+
+{% endblock %}

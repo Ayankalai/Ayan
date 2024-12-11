@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    LOGOUT
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center text-warning">
+        LOGOUT FORM
+    </h1>
+    <div class="container mt-4">
+     
+        <P>you have been loged out</P>
+        <a href="{% url 'login' %}">LOGIN HERE</a>
+    </div>
+{% endblock %}

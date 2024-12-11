@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    REGISTRATION
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center text-warning">
+        REGISTRATION FORM
+    </h1>
+    <div class="container mt-4">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+    
+            <button class="btn-primary">
+                REGISTOR
+            </button>
+        </form>
+
+        <P>Do you have a account ?</P>
+        <a href="{% url 'login' %}">LOGIN HERE</a>
+    </div>
+{% endblock %}
